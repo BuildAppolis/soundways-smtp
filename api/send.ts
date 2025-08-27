@@ -2,7 +2,8 @@ import { VercelRequest, VercelResponse } from '@vercel/node';
 import { Unsend } from 'unsend';
 
 // Initialize Unsend with the API key from environment variables
-const unsend = new Unsend(process.env.UNSEND_API_KEY || '', 'https://mailer.soundways.org');
+// Self-hosted Unsend instance at mailr.buildappolis.com
+const unsend = new Unsend(process.env.UNSEND_API_KEY || '', 'https://mailr.buildappolis.com');
 
 // Email sending configuration
 const DEFAULT_FROM = 'notify.soundways.org';

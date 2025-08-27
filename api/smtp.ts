@@ -14,7 +14,8 @@ const SMTP_CREDENTIALS = {
 interface SMTPAuthRequest {
   username: string;
   password: string;
-  from: string;
+  email?: string; // Email field from client configuration
+  from?: string;
   to: string | string[];
   subject: string;
   body: string;
@@ -68,7 +69,7 @@ export default async function handler(
     }
 
     // Extract email data
-    const { from, to, subject, body, html } = req.body;
+    const { email, from, to, subject, body, html } = req.body;
 
     // Validate required fields
     if (!to || !subject || (!body && !html)) {
@@ -78,10 +79,19 @@ export default async function handler(
       return;
     }
 
+    // Determine the from address
+    // Priority: explicit from > email field > default
+    let fromAddress = from || email || 'no-reply@notify.soundways.org';
+    
+    // If the email/from doesn't include a domain, use notify.soundways.org
+    if (fromAddress && !fromAddress.includes('@')) {
+      fromAddress = `${fromAddress}@notify.soundways.org`;
+    }
+
     // Send email via Unsend
     const emailConfig = {
       to: Array.isArray(to) ? to : [to],
-      from: from || 'no-reply@notify.soundways.org',
+      from: fromAddress,
       subject,
       text: body,
       html: html || body

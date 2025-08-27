@@ -69,6 +69,7 @@ For email clients (Outlook, Gmail, Thunderbird, etc.):
 - **Security**: `STARTTLS` or `TLS`
 - **Authentication**: Required
 - **Username**: `soundways`
+- **Email**: `no-reply@notify.soundways.org`
 - **Password**: `75cc4d20f15b370a245cfc905b37a69a`
 
 ### API Endpoints

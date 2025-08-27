@@ -59,11 +59,30 @@ pnpm deploy
 }
 ```
 
+## SMTP Configuration
+
+For email clients (Outlook, Gmail, Thunderbird, etc.):
+
+### SMTP Settings
+- **SMTP Server**: `smtp.soundways.org`
+- **Port**: `587`
+- **Security**: `STARTTLS` or `TLS`
+- **Authentication**: Required
+- **Username**: `notifications@soundways.org`
+- **Password**: `soundways-smtp-2024`
+
+### API Endpoints
+
+1. **SMTP Bridge** `/api/smtp` - Accepts authenticated SMTP-style requests
+2. **Direct Send** `/api/send` - Original API endpoint
+3. **Test Auth** `/api/test` - Test SMTP credentials
+4. **Config** `/api/config` - Get server configuration
+
 ## Configuration
 
-- **API Endpoint**: `https://mailer.soundways.org`
+- **API Endpoint**: `https://mailr.buildappolis.com`
 - **From Domain**: `notify.soundways.org`
-- **Provider**: Unsend
+- **Provider**: Unsend (self-hosted)
 
 ## Security Notes
 

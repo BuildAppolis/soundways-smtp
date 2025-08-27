@@ -62,7 +62,7 @@ export default async function handler(
     // Prepare email configuration
     const emailConfig = {
       to: emailData.to,
-      from: emailData.from ? `${emailData.from}@${DEFAULT_FROM}` : `noreply@${DEFAULT_FROM}`,
+      from: emailData.from ? `${emailData.from}@${DEFAULT_FROM}` : `no-reply@${DEFAULT_FROM}`,
       subject: emailData.subject,
       html: emailData.html,
       text: emailData.text,

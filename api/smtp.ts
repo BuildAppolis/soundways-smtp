@@ -81,7 +81,7 @@ export default async function handler(
     // Send email via Unsend
     const emailConfig = {
       to: Array.isArray(to) ? to : [to],
-      from: from || 'notifications@notify.soundways.org',
+      from: from || 'no-reply@notify.soundways.org',
       subject,
       text: body,
       html: html || body

@@ -1,0 +1,19 @@
+{
+  "name": "smtp-soundways",
+  "version": "1.0.0",
+  "description": "SMTP server for Soundways using Unsend",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "vercel build",
+    "deploy": "vercel deploy"
+  },
+  "dependencies": {
+    "unsend": "^1.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.3",
+    "vercel": "^32.7.2"
+  }
+}

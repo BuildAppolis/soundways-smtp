@@ -1,0 +1,12 @@
+{
+  "name": "soundways-smtp",
+  "scope": "buildappolis",
+  "functions": {
+    "api/send.ts": {
+      "maxDuration": 10
+    }
+  },
+  "env": {
+    "UNSEND_API_KEY": "@unsend-api-key"
+  }
+}

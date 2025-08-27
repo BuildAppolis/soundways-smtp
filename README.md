@@ -68,8 +68,8 @@ For email clients (Outlook, Gmail, Thunderbird, etc.):
 - **Port**: `587`
 - **Security**: `STARTTLS` or `TLS`
 - **Authentication**: Required
-- **Username**: `notifications@soundways.org`
-- **Password**: `soundways-smtp-2024`
+- **Username**: `soundways`
+- **Password**: `75cc4d20f15b370a245cfc905b37a69a`
 
 ### API Endpoints
 

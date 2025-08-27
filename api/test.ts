@@ -1,8 +1,8 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
 
 const SMTP_CREDENTIALS = {
-  username: process.env.SMTP_USERNAME || 'notifications@soundways.org',
-  password: process.env.SMTP_PASSWORD || 'soundways-smtp-2024'
+  username: process.env.SMTP_USERNAME || 'soundways',
+  password: process.env.SMTP_PASSWORD || '75cc4d20f15b370a245cfc905b37a69a'
 };
 
 export default async function handler(

@@ -12,7 +12,7 @@ export default async function handler(
       port: 587,
       security: 'STARTTLS',
       authentication: 'Basic',
-      username: 'notifications@soundways.org',
+      username: 'soundways',
       endpoints: {
         send: 'https://smtp.soundways.org/api/smtp',
         test: 'https://smtp.soundways.org/api/test'
